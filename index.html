@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>PhoneGap Self-Defense for Web Devs — PhoneGap Day US 2013</title>
+
+		<meta name="description" content="Phone Gap Self-defense for Web Devs">
+		<meta name="author" content="Lyza Danger Gardner">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<section>
+					<h1>Phone Gap Self-defense for Web Devs</h1>
+					<p>
+						<small>Made by Lyza Danger Gardner</small>
+					</p>
+					<aside class="notes">I'm going to try to get through this whole preso without using the word <em>performant</em></aside>
+				</section>
+
+				<section>
+					<h2>I'm a web developer</h2>
+				</section>
+
+				<section>
+
+					<p><a href="http://cloudfour.com"><img class="logo" src="assets/logo.svg" alt="Cloud Four"></a></p>
+					<aside class="notes">I'm a co-founder of Cloud Four, where we make web sites and applications for mobile devices and other platforms.</aside>
+				</section>
+
+				<section data-background="assets/handdevices.jpg">
+					<h2>Our Focus is Mobile</h2>
+					<aside class="notes">At Cloud Four, our focus is intensely mobile and pan-device. We spend a lot of time making things work on as many platforms as possible.</aside>
+				</section>
+
+				<section data-background="assets/rosetinted.jpg">
+					<h2>Our philosophy approaches things with a web-tinted filter</h2>
+					<aside class="notes">At the core of how we get our work done is the web.</aside>
+				</section>
+
+				<section data-background="assets/devicepile.jpg">
+					<h2>More web, less platform-specific native approaches</h2>
+				</section>
+
+				<section>
+					<blockquote cite="http://phonegap.com/">PhoneGap is a free and open source framework that allows you to create mobile apps using standardized <span class="fragment highlight-cloudfour">web</span> APIs for the platforms you care about.</blockquote>
+					<aside class="notes">When I was first introduced to PhoneGap several years ago, I was taken with its notion that the Web could be a viable <em>unifying platform</em> for the pan-device future.</aside>
+				</section>
+				<section>
+
+					
+					<section>
+					  <h2>Here's how I interpreted it</h2>
+						<ul>
+							<li class="fragment">PhoneGap chooses the Web!</li>
+							<li class="fragment">I can use the Web to make mobile applications!</li>
+							<li class="fragment">I <em>love</em> the Web!</li>
+							<li class="fragment">This is going to be pretty great!</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<h2>My Grand Vision</h2>
+					<ul>
+						<li class="fragment">Web applications</li>
+						<li class="fragment">Consuming APIs</li>
+						<li class="fragment">Web standards commonality, but comfortable on device</li>
+						<li class="fragment">Developed mostly within the browser</li>
+						<li class="fragment">Runs in the browser <em>and</em> on devices</li>
+					</ul>
+					<aside class="notes">I started integrating PhoneGap into my vision of a pan-device universe with standardized web components at its core. Built with standards-based web applications consuming data from APIs, with extensive commonality yet still comfortable on each specific platform, retaining the comfortable and <em>quick</em> web developer workflow, primarily in the browser, and with an end product that runs in the browser <em>as well as</em> on targeted platforms.</aside>
+				</section>
+
+				<section>
+					<section data-background="assets/joyleap.jpg">
+						<h2>Things are going to be great!</h2>
+						<aside class="notes">I have a new career as app developer! Everybody can build an app! ANYBODY!</aside>
+					</section>
+					<section>
+						<h3>My Li'l First PhoneGap Project!&trade;</h3>
+						<ol>
+							<li class="fragment">Set up my project in XCode!</li>
+							<li class="fragment">Drop PhoneGap in!</li>
+							<li class="fragment">Basic HTML and JavaScript and CSS!</li>
+							<li class="fragment">Add a simple plugin!</li>
+							<li class="fragment">Build!</li>
+							<li class="fragment">Everything works perfectly! I AM APP DEVELOPER!</li>
+						</ol>
+					</section>
+					<section data-background="assets/grin.jpg">
+						<h3>GOLD STAR</h3>
+					</section>
+				</section>
+
+
+				<section>
+					<section>
+						<h4>[This Sounds A bit too good to be true]</h4>
+						<aside class="notes">At the same time, when I am faced with my first PhoneGap project of any actual scope to be used by real humans on multiple platforms, I start having some nagging voices in my head.</aside>
+					</section>
+					<section data-background="assets/toogood.jpg">
+						<h4>[What could possibly go wrong?]</h4>
+						<aside class="notes">Maybe a totally web-centric view of things could lead to some woes. After all, we're not going to be successful just shoving a web site into an application wrapper...</aside>
+					</section>
+					<section>
+						<h3>The Dark Side of the Web</h3>
+						<blockquote cite="http://phonegap.com/2012/05/09/phonegap-beliefs-goals-and-philosophy/">The web is decidedly <span class="fragment highlight-cloudfour">not</span> a <span class="fragment highlight-cloudfour">first class</span> development platform: <span class="fragment highlight-cloudfour">opaque</span> introspection, <span class="fragment highlight-cloudfour">blunt</span> tools, <span class="fragment highlight-cloudfour">poor API</span> surface area, and a rather <span class="fragment highlight-cloudfour">limited</span> set of GUI elements. The web has host of other <span class="fragment highlight-cloudfour">problems</span>...<span class="fragment highlight-cloudfour">there are no silver bullets</span>.
+						</blockquote>
+						<p class="citation">Brian LeRoux</p>
+					</section>
+					<section data-background="assets/leroux.jpg">
+						<small class="fragment grow"><em>Oh.</em></small>
+						<aside class="notes">Crap.</aside>
+					</section>
+					<section>
+						<small class="fragment grow"><em>The app is growing</em></small>
+					</section>
+					<section>
+						<small class="fragment grow"><em>It's getting harder</em></small>
+					</section>
+					<section data-background="assets/felldown.jpg">
+						<small class="fragment grow"><em>Things aren't going so well</em></small>
+						<aside class="notes">I bet you saw where this was going.</aside>
+					</section>
+				</section>
+
+
+				<section>
+					<h1>A bit of self-defense</h1>
+					<h5>PhoneGap Self-defense for those of us who think like the web</h5>
+					<aside class="notes">I came out the other side with a better understanding, and some psychic bruises. And maybe I can help you have a smoother ride.</aside>
+				</section>
+
+				<section>
+					<section data-background="assets/sad.jpg">
+					  <h2>Where we go wrong</h2>
+					  <aside class="notes">If you are a web developer about to make your first forays into PhoneGap, here are some areas you may want to wear some extra padding.</aside>
+					</section>
+					<section>
+						<h3>Core Web Concepts</h3>
+						<p>Adherence to certain core web <span class="fragment highlight-cloudfour">concepts</span> can get us in trouble. Some things we have long held to be Absolutely The Way are different in the app world, subtlely or extremely.</p>
+						<aside class="notes">We have certain patterns of thinking about the way the web works as a whole, about the way that Web standards work together. These patterns are often skewed in the native application context.</aside>
+					</section>
+					<section>
+						<h3>Nuance and Best Practices</h3>
+						<p>Like it or not, we're <span class="fragment highlight-cloudfour">on device</span> in a <span class="fragment highlight-cloudfour">native context</span>.</p>
+						<aside class="notes">As web developers, we tend to fight platform specificity. It's in our nature. But we <em>are</em> in a native context. And because of that, we're beholden to certain patterns that will be new to us.</aside>
+					</section>
+
+					<section>
+						<h3>Process, Components and Tools</h3>
+						<p>Suddenly, your workflow matters. A trusty <span class="fragment highlight-cloudfour">text editor isn't enough</span> anymore, there's tons of <span class="fragment highlight-cloudfour">tedious detail</span> <span class="fragment highlight-cloudfour">you need to deal with</span>
+						</p>
+						<aside class="notes">I'm somewhat irrationally proud of my "have text editor, will travel", environment-free way of developing and that no longer really cuts it. Suddenly I have to buckle down and deal with config-level tedium that does not generally appeal to me as a web dev. But giving it short shrift can be fatal.</aside>
+					</section>
+
+					<section data-background="assets/storm.jpg">
+						<h3>Complexity</h3>
+						<p>And these problems <span class="fragment highlight-cloudfour">compound</span> as your app grows.</p>
+						<aside class="notes">It's self-evident that these concerns would get more complex as your app grows. So I urge you to get out in front of things beforehand. So, everybody can make a native application...is that really true?</aside>
+					</section>
+				</section>
+
+
+				<section>
+					<h2>Defending Yourself</h2>
+					<h5><em>Category 1</em></h5>
+					<h3 class="fragment roll-in">Certain Web Concepts Apply a Bit Differently</h3>
+					<aside class="notes">Developing native applications using PhoneGap made me rethink a few web concepts I'd long since considered settled.</aside>
+				</section>
+
+				<section>
+					<section data-transition="fade">
+						<h2>In My Brain The Web &asymp;</h2>
+						<h3 class="fragment">TCP/IP</h3>
+						<h3 class="fragment">+</h3>
+						<h3 class="fragment">HTTP</h3>
+						<h3 class="fragment">+</h3>
+					  <h3 class="fragment">User Agent</h3>
+					  <aside class="notes">One of the most substantial awakenings for me involved how I thought of the web at its very center.</aside>
+					</section>
+					<section data-transition="none">
+						<h2>&nbsp;</h2>
+						<h3>&nbsp;</h3>
+						<h3>&nbsp;</h3>
+						<h3>HTTP</h3>
+						<h3 class="fragment">HTTP is a <span class="fragment highlight-cloudfour">stateless</span> protocol.</h3>
+						<h3>&nbsp;</h3>
+					</section>
+					<section data-transition="zoom">
+						<h3>State<span class="fragment fade-out">less</span></h3>
+						<p class="fragment">In the application context—especially the non-browser context—we suddenly have state. In spades. To manage.</p>
+						<aside class="notes">Our applications have a bona-fide <em>lifecycle</em> now.</aside>
+					</section>
+
+					<section>
+						<h3>The doctrine I was led to believe</h3>
+						<small>request response request response request response request response request response request response request response request response request response request response request response request response request response request response request response request response request response request response request response request response request response request response request response request response request response request response request response request response request response request response request response request response request response request response request response</small>
+						<aside class="notes">I was brought up to understand web interactions as a discrete series of stateless request-response cycles.</aside>
+					</section>
+
+					<section>
+						<h4>Yeah, yeah, yeah</h4>
+						<div class="fragment">
+							<h3>Welcome to JavaScript Applications 101, Lyza</h3>
+							  <p>This isn't exactly a brand-new concern.</p>
+							  <p class="fragment">But it is <span class="fragment highlight-cloudfour">intensified</span> in the native application context.</p>
+						</div>
+						<aside class="notes">I realize that's a rather 1990s way of looking at the web, and I have long since started disabusing myself of the simplicity of that notion. But what I didn't realize is just how much this breaks down in a long-running native application context.</aside>
+					</section>
+
+					<section data-background="assets/sheep.jpg">
+						<h3>I thought I sorta got it</h3>
+						<h4 class="fragment">But I still screwed it up</h4>
+					</section>
+
+					<section>
+						<h3>Im doin it rong</h3>
+						<div class="fragment">
+							<p><em>e.g.</em></p>
+							<blockquote cite="http://lostechies.com/derickbailey/2011/08/03/stop-using-backbone-as-if-it-were-a-stateless-web-server/">Stop using backbone as if it were a stateless web server.
+						 </blockquote>
+							<p class="citation"><a href="http://lostechies.com/derickbailey/2011/08/03/stop-using-backbone-as-if-it-were-a-stateless-web-server/">Derick Bailey</a></p>
+							<small class="fragment">Oh</small>
+						</div>
+					</section>
+
+					<section>
+						<h3>Managing your History State</h3>
+						<ul>
+							<li class="fragment">First, Know the <code>history</code> API well</li>
+							<li class="fragment">Understand how it can help you separate concerns</li>
+							<li class="fragment">Push URL-addressable state often</li>
+							<li class="fragment">but don't necessarily trigger associated routes or requests</li>
+						</ul>
+					</section>
+
+					<section data-background="assets/lifecycle.jpg">
+						<h3>Think through the lifecycle</h3>
+						<p>Know your events and how the app will live in its <span class="fragment highlight-cloudfour">long-running</span> context</p>
+						<p>
+							<pre class="fragment"><code data-trim contenteditable>
+// Hold that thought
+document.addEventListener("pause", hangOnForAWhile, false);
+// Oh, we're back!
+document.addEventListener("resume", ohGodWhereWasI, false);
+						  </pre></code>
+					  </p>
+					  <aside class="notes">Your application <em>has</em> a life cycle. It can get long in the tooth, even. We don't get reloads and do-overs that we can rely on anymore. Things stick around.</aside>
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+						<h2>Persistence and Data</h2>
+						<p>It's not just for web servers anymore</p>
+						<aside class="notes">We also have to recalibrate how we think about data and the client</aside>
+					</section>
+					<section>
+						<h3>The Old Way</h3>
+						<dl>
+							<dt>Application</dt>
+							<dd>Hay, API on server, tell me about <code>thing/42</code></dd>
+
+							<dt>API</dt>
+							<dd>Sure, here you go!</dd>
+
+							<dt>Application</dt>
+							<dd>Thanks! I'd be helpless without you!</dd>
+						</dl>
+						<aside class="notes">When I was but a lad, client applications were pretty helpless.</aside>
+					</section>
+					<section>
+						<h3>A Modern Interpretation</h3>
+						<dl>
+							<dt>Application</dt>
+							<dd>Actually, API, I already have my own version of what <code>thing/42</code> looks like.</dd>
+
+							<dt>API</dt>
+							<dd>...</dd>
+
+							<dt>Application</dt>
+							<dd>...So, API, my version of what <code>thing/42</code> looks like has changed a bit while we weren't talking while my user was going through that last tunnel? Anyway, here's a patch of what I changed. Deal with it.</dd>
+
+							<dt>API</dt>
+							<dd>!!</dd>
+						</dl>
+					</section>
+
+					<section data-background="assets/bletchley.jpg">
+						<h3>You'll be Wrangling Data</h3>
+						<ul>
+							<li class="fragment">Caching</li>
+							<li class="fragment">Synching</li>
+							<li class="fragment">Offline mode</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Wrangling Data: Caching</h3>
+						<ul>
+							<li class="fragment">Default to keeping stuff locally</li>
+							<li class="fragment">I don't mind using <code>localStorage</code><span class="fragment">...<em>what?</em></span></li>
+							<li class="fragment">Don't <em>depend</em> on <code>localStorage</code></li>
+							<li class="fragment">Lots of stuff? You probably want to use <code><a href="https://developer.mozilla.org/en-US/docs/IndexedDB">IndexedDB</a></code> or something cool like that.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h3>Wrangling Data: Synching</h3>
+						<p>Your models are dirty, dirty, dirty</p>
+						<ul>
+							<li class="fragment">Synching local dirty data and doing a good job of it is a non-trivial problem</li>
+							<li class="fragment">I'm not smart enough to tackle it myself, so I use things like <code><a href="https://github.com/lucian1900/Backbone.dualStorage">backbone.dualStorage</a></code></li>
+							<li class="fragment">Make it behave RESTfully just like remote sync to keep the chaos minimized</li>
+							<li class="fragment">Nervous? You might consider readonly for local</li>
+						</ul>
+						<aside class="notes">Or...if you don't feel like giving all of your data to Parse</aside>
+					</section>
+
+					<section>
+						<h3>Wrangling Data: Offline Mode</h3>
+						<p>Finally a bit of good news: build your data wrangling carefully, and offline mode can follow naturally.</p>
+						<p class="fragment">WRT PhoneGap proper, If you want a bit more control:</p>
+						<pre class="fragment"><code data-trim contenteditable>
+// Hold that thought
+document.addEventListener("offline", nobodyIsAnswering, false);
+// Oh, we're all talking again!
+document.addEventListener("online", hiThereHeresWhatChanged, false);
+						 </pre></code>
+					  </p>
+					 </section>
+				</section>
+
+				<section>
+					<section data-markdown>
+						<script type="text/template">
+						## HTML "Documents"
+						```
+							<!doctype html>
+							<html>
+							<head>
+							  <title>My Really Great Applimacation</title>
+							</head>
+							<body>
+								<!-- The emptiness of my existence is killing me -->
+							</body>
+							</html>
+						```
+
+						I still have some heartache over this.
+
+						</script>
+					</section>
+				</section>
+
+				<section data-background="assets/onward.jpg">
+					<h2>Bravely Onward, O Web Developers!</h2>
+				</section>
+
+				<section>
+					<section>
+						<h2>Defending yourself</h2>
+						<h4><em>Category 2</em></h4>
+						<h3 class="fragment roll-in">Nuance and Context</h3>
+						<aside class="notes">So, now we're inside of a native application. What does it look like from in here?</aside>
+					</section>
+					<section>
+						<h3>O, Woe, It's Changed my Reality</h3>
+						<blockquote>Blah, blah, blah, <em>user expectations</em>,
+							blah blah blah <em>native metaphors</em>, blah blah blah</blockquote>
+						<p class="citation">Everyone</p>
+					</section>
+					<section>
+						<h3>Application Context: Navigation</h3>
+						<ul>
+							<li class="fragment">Navigation is often, by necessity, multi-tracked and non-linear</li>
+							<li class="fragment"><code>forward</code> and <code>backward</code> are sometimes not enough</li>
+							<li class="fragment">This ties in with our other friendly battle, state</li>
+						</ul>
+					</section>
+					<section data-background="assets/meta.jpg">
+						<h3>Application Context: A potpourri of platform-specific details you now need to care about</h3>
+						<aside class="notes">We're no longer safe inside generic, universal browser chrome. We have to care about device and platform specifics to get our jobs done. We have to care about the interface.</aside>
+					</section>
+					<section>	
+						<h3>Potpourri: Interface</h3>
+						<p>Here is just <span class="fragment highlight-cloudfour">one random example</span> of things you now need to care about:</p>
+						<ul class="fragment">
+							<li>Keyboards
+								<ul>
+									<li class="fragment">Soft or hard?</li>
+									<li class="fragment">How to trigger?</li>
+									<li class="fragment">How to get the right one?</li>
+									<li class="fragment">How to make it go away?</li>
+									<li class="fragment">How big is it?</li>
+									<li class="fragment">How has its appearance affected the viewport?</li>
+									<li class="fragment">How to add a magic-y submit button-y thing</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h3>MOAR Interface Potpourri</h3>
+						<p>It is up to you, intrepid developer, to make sure that things behave acceptably.</p>
+						<p class="fragment">e.g.</p>
+						<ul>
+							<li class="fragment"><code><a href="https://github.com/ftlabs/fastclick">fastclick.js</a></code> for eliminating 300ms tap <span class="fragment highlight-cloudfour">delays</span></li>
+							<li class="fragment"><code><a href="https://github.com/j-mcnally/cordova-statusTap">statusTap</a></code> plugin on iOS</li>
+							<li class="fragment">Various plugins for making third-party social authentication tolerable</li>
+						</ul>
+						<aside class="fragment">It's often up to you to make the interface work better.</aside>
+					</section>
+
+					<section>
+						<h4>The good news about potpourri is that <span class="fragment highlight-cloudfour">you can usually Google for it</span></h4>
+					</section>
+
+					<section>
+						<h3>Lower-level concerns</h3>
+						<blockquote>My job is taking <span class="fragment highlight-cloudfour">high-level, slow</span> languages and making them work in <span class="fragment highlight-cloudfour">higher-level, slower</span> ways.</blockquote>
+						<p class="citation">Me, circa 2001</p>
+					</section>
+
+					<section>
+						<h3>Lower-level concerns</h3>
+					  <p class="fragment">Long-running native apps on mobile hardware emphasize the need for</p>
+					  <ul>
+					  	<li class="fragment">Being mindful to memory use</li>
+					  	<li class="fragment">Knowing how to profile our app...<span class="fragment">and what the results mean</li>
+					  	<li class="fragment">Not making stuff blow up being the goal</li>
+					  </ul>
+					 </section>
+
+					 <section>
+					 		<h3>Not Making the App go Ka-boof</h3>
+					 		<img src="assets/whoops.jpg" alt="ka-boof">
+					 </section>
+
+					<section>
+						<h4>The bad news about design and architecture of your app is that</h4>
+						<h4><span class="fragment highlight-cloudfour">you can't usually Google for it</span></h4>
+					</section>
+
+					<section>
+						<h3>Nuance and Context: Putting it together</h3>
+						<ul>
+							<li class="fragment roll-in">Metaphorical Shifts
+								<ul>
+									<li class="fragment roll-in">Non-linear navigation</li>
+									<li class="fragment roll-in">State management</li>
+								</ul>
+							</li>
+							<li class="fragment roll-in">Interface Context
+								<ul>
+									<li class="fragment roll-in">Platform-specific optimization (keyboard)</li>
+									<li class="fragment roll-in">Tap delay acceleration</li>
+								</ul>
+							</li>
+							<li class="fragment roll-in">Memory Management and care</li>
+						</ul>
+					</section>
+
+				</section>
+
+				<section data-background="#000000">
+					<video src="assets/navigation.mp4" data-autoplay></video>
+				</section>
+
+				<section>
+					<section>
+						<h2>Defending Yourself</h2>
+						<h4><em>Category 3</em></h4>
+						<h3 class="fragment roll-in">Process, Components and Tools</h3>
+						<aside class="notes">Getting detail-oriented. The whole world has changed with PhoneGap command-line.</aside>
+					</section>
+					<section>
+						<h3>Suddenly  a lot of <span class="fragment highlight-cloudfour">minutiae</span></h3>
+					    <ul>
+								<li class="fragment">Frameworks</li>
+								<li class="fragment">Libraries</li>
+								<li class="fragment">Config</li>
+								<li class="fragment">Build Tools</li>
+								<li class="fragment">SDKs</li>
+								<li class="fragment">Distribution</li>
+								<li class="fragment">Dependencies</li>
+					    </ul>
+					</section>
+					<section data-background="assets/yawn.jpg">
+						<h4 class="fragment shrink">Yawn.</h4>
+					</section>
+					<section>
+						<h3>Your Workflow Matters</h3>
+						<p class="fragment">Because you will lose your mind later if you don't get it right beforehand.</p>
+						<aside class="notes">If you're not detail-oriented, you'd better skill up a bit</aside>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>For me, everything starts in the browser</h2>
+						<p class="fragment">Making things work in-browser where possible is so important to me that I will sometimes go out of my way to do it.</p>
+					</section>
+
+					<section>
+						<h4>Isn't that kind of pedantic?</h4>
+						<img src="assets/surly.jpg" alt="surly">
+					</section>
+
+					<section>
+						<h3>But here are the benefits</h3>
+						<ul>
+							<li class="fragment"><span class="fragment highlight-cloudfour">Waaaaaaay</span> more convenient development workflow</li>
+							<li class="fragment">Keeps you honest about core web and standards</li>
+							<li class="fragment">Makes it easier for other teammates to contribute</li>
+							<li class="fragment">I absolutely hate doing <span class="fragment highlight-cloudfour">debug</span> on device</li>
+					  </ul>
+					</section>
+
+					<section>
+						<h3>Maximize what you do in browser</h3>
+						<h4>Minimize what only works on device or in emulator</h4>
+						<aside class="notes">How about that PhoneGap command line? This is going to be great.</aside>
+					</section>
+
+					<section data-background="assets/family.jpg">
+						<h3>And then...</h3>
+						<p class="fragment">Feature-detect and enhance with PhoneGap, just like your mom raised you</p>
+					</section>
+
+					<section>
+						<h3>Progressive Enhancement, Yup</h3>
+			      <pre><code data-trim contenteditable>
+if window.plugins.barcodeScanner
+  @scan "the hell out of it"
+			      </code></pre>
+					</section>
+
+					<section data-transition="none">
+						<h2>What comes first?</h2>
+						<h4>Here's my setup</h4>
+						<ol>
+							<li class="fragment">It still does all start with a text editor and a browser</li>
+						  <li class="fragment">Application framework and code (hackity hack)</li>
+							<li class="fragment">Local web server for dev tasks</li>
+							<li class="fragment">PhoneGap build scripts (simple)</li>
+							<li class="fragment">Build-to-device</li>
+							<li class="fragment">Distribute</li>
+						</ol>
+					</section>
+
+				  <section data-transition="none">
+						<h2>Core Things</h2>
+						<h4>Quick 'n Dirty</h4>
+						<ol>
+							<li>It still does all start with a text editor and a browser</li>
+						  <li>Application framework and code (hackity hack)</li>
+							<li>Local web server for dev tasks</li>
+							<li class="fragment fade-out">PhoneGap build scripts (simple)</li>
+							<li class="fragment fade-out">Build-to-device</li>
+							<li class="fragment fade-out">Distribute</li>
+						</ol>
+				  </section>
+
+				  <section>
+				  	<h3>Wash, rinse, repeat</h3>
+				  	<p class="fragment">Steps <strong>1-3</strong> happen every time I modify a file in my working area.</p>
+				  	<p class="fragment">Classic hack, save, reload pattern.</p>
+				  	<p class="fragment">Well, that's nice and familiar.</p>
+				  	<p class="fragment">Build scripts easy; distribution when it's needed</p>
+				  </section>
+
+				</section>
+
+
+				<section>
+					<section>
+						<h2>A bit of self-defense</h2>
+						<h4>Category 4</h4>
+						<h3 class="fragment roll-in">Summing it up</h3>
+					</section>
+
+					<section data-background="assets/adventure.jpg">
+						<h2>Those of you embarking on PhoneGap adventures who think like web developers...</h2>
+					</section>
+
+					<section>
+						<h3>Watch for Web Concepts that Apply Differently</h3>
+					</section>
+
+					<section>
+						<h3>Workflow first</h3>
+					</section>
+
+					<section>
+						<h3>Stay in the browser whenever you can</h3>
+					</section>
+
+					<section>
+						<h3>Approach PhoneGap as Progressive Enhancement</h3>
+					</section>
+
+	        <section>
+						<h3>But Remember</h3>
+						<p class="fragment">It doesn't "work" until it works on device</p>
+					</section>
+
+
+					<section>
+						<h3>And be aware of specific context</h3>
+						<p><span class="fragment">User expectations...</span><span class="fragment">experience...</span><span class="fragment">brand...</span><span class="fragment">native feel...</span><span class="fragment">yeah, that</span></p>
+
+					</section>
+
+					<section>
+						<h3>The Biggest Recommendation of them All</h3>
+						<p class="fragment">Give yourself time. Lots of time.</p>
+					</section>
+
+					<section>
+						<h4>And Remember, Always</h4>
+						<h1>You can do this!</h1>
+					</section>
+					
+				</section>
+
+				<section>
+					<p><a href="http://cloudfour.com"><img class="logo" src="assets/logo.svg" alt="Cloud Four"></a></p>
+					<p>&nbsp;</p>
+					<h5>Lyza Danger Gardner / @lyzadanger</h5>
+					<p><small>Download this presentation at <a href="https://github.com/lyzadanger/pgd-2013-reveal.js">https://github.com/lyzadanger/pgd-2013-reveal.js</a></small></p>
+					<p><small>Designed with <a href="https://github.com/hakimel/reveal.js">Reveal.js</a> with lovely help from <a href="http://twitter.com/tylersticka">@tylersticka</a> on the Cloud Four theme. All photos taken by me except: <em>Our Focus is Mobile</em> and <em>Gold Star</em> (Lisa Teso); <em>Yawn</em> (Luke Wroblewski); <em>Ka-boof</em> (Unknown)</small></p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme || 'cloudfour-dark', // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				],
+				keyboard: {
+					48: function() { // Go to first slide when 0 pressed
+						Reveal.slide(0);
+					}
+				}
+			});
+
+		</script>
+
+	</body>
+</html>
