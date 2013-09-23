@@ -61,12 +61,13 @@
 				</section>
 
 				<section data-background="assets/rosetinted.jpg">
-					<h2>Our philosophy approaches things with a web-tinted filter</h2>
-					<aside class="notes">At the core of how we get our work done is the web.</aside>
+					<h2>At our core: a web-tinted filter</h2>
+					<aside class="notes">At the core of how we get our work done is the web. We solve problems with an emphasis on commonality first.</aside>
 				</section>
 
 				<section data-background="assets/devicepile.jpg">
 					<h2>More web, less platform-specific native approaches</h2>
+					<aside class="notes">Seeking universality where possible versus platform-specific, native approaches.</aside>
 				</section>
 
 				<section>
@@ -90,6 +91,7 @@
 				<section>
 					<h2>My Grand Vision</h2>
 					<ul>
+						<li class="fragment">A pan-device universe</li>
 						<li class="fragment">Web applications</li>
 						<li class="fragment">Consuming APIs</li>
 						<li class="fragment">Web standards commonality, but comfortable on device</li>
@@ -124,6 +126,9 @@
 				<section>
 					<section>
 						<h4>[This Sounds A bit too good to be true]</h4>
+					</section>
+					<section>
+						<h4>[My first <span class="fragment highlight-cloudfour">real</span> PhoneGap project]</h4>
 						<aside class="notes">At the same time, when I am faced with my first PhoneGap project of any actual scope to be used by real humans on multiple platforms, I start having some nagging voices in my head.</aside>
 					</section>
 					<section data-background="assets/toogood.jpg">
@@ -161,23 +166,23 @@
 
 				<section>
 					<section data-background="assets/sad.jpg">
-					  <h2>Where we go wrong</h2>
+					  <p>If you are a <span class="fragment highlight-cloudfour">web developer</span> about to make your <span class="fragment highlight-cloudfour">first forays</span> into PhoneGap...</p>
 					  <aside class="notes">If you are a web developer about to make your first forays into PhoneGap, here are some areas you may want to wear some extra padding.</aside>
 					</section>
 					<section>
-						<h3>Core Web Concepts</h3>
-						<p>Adherence to certain core web <span class="fragment highlight-cloudfour">concepts</span> can get us in trouble. Some things we have long held to be Absolutely The Way are different in the app world, subtlely or extremely.</p>
+						<h3>1: Core Web Concepts</h3>
+						<p>Adherence to certain core web <span class="fragment highlight-cloudfour">concepts</span> can get us in trouble. Some of the patterns we have long held to be Absolutely The Way are <span class="fragment highlight-cloudfour">skewed in the app world</span>, subtlely or extremely.</p>
 						<aside class="notes">We have certain patterns of thinking about the way the web works as a whole, about the way that Web standards work together. These patterns are often skewed in the native application context.</aside>
 					</section>
 					<section>
-						<h3>Nuance and Best Practices</h3>
-						<p>Like it or not, we're <span class="fragment highlight-cloudfour">on device</span> in a <span class="fragment highlight-cloudfour">native context</span>.</p>
+						<h3>2: Nuance and Best Practices</h3>
+						<p>Like it or not, we're <span class="fragment highlight-cloudfour">on device</span> in a <span class="fragment highlight-cloudfour">native context</span>. We're beholden to certain <span class="fragment highlight-cloudfour">patterns and metaphors</span>.</p>
 						<aside class="notes">As web developers, we tend to fight platform specificity. It's in our nature. But we <em>are</em> in a native context. And because of that, we're beholden to certain patterns that will be new to us.</aside>
 					</section>
 
 					<section>
-						<h3>Process, Components and Tools</h3>
-						<p>Suddenly, your workflow matters. A trusty <span class="fragment highlight-cloudfour">text editor isn't enough</span> anymore, there's tons of <span class="fragment highlight-cloudfour">tedious detail</span> <span class="fragment highlight-cloudfour">you need to deal with</span>
+						<h3>3: Process, Components and Tools</h3>
+						<p>Suddenly, your workflow matters. A trusty <span class="fragment highlight-cloudfour">text editor isn't enough</span> anymore, there's tons of <span class="fragment highlight-cloudfour">tedious detail</span> <span class="fragment highlight-cloudfour">you need to deal with.</span>
 						</p>
 						<aside class="notes">I'm somewhat irrationally proud of my "have text editor, will travel", environment-free way of developing and that no longer really cuts it. Suddenly I have to buckle down and deal with config-level tedium that does not generally appeal to me as a web dev. But giving it short shrift can be fatal.</aside>
 					</section>
@@ -193,7 +198,7 @@
 				<section>
 					<h2>Defending Yourself</h2>
 					<h5><em>Category 1</em></h5>
-					<h3 class="fragment roll-in">Certain Web Concepts Apply a Bit Differently</h3>
+					<h3 class="fragment roll-in">Rethinking Core Web Concepts</h3>
 					<aside class="notes">Developing native applications using PhoneGap made me rethink a few web concepts I'd long since considered settled.</aside>
 				</section>
 
@@ -217,7 +222,7 @@
 					</section>
 					<section data-transition="zoom">
 						<h3>State<span class="fragment fade-out">less</span></h3>
-						<p class="fragment">In the application context—especially the non-browser context—we suddenly have state. In spades. To manage.</p>
+						<p class="fragment">In the application context—especially the non-browser context—we suddenly have <span class="fragment highlight-cloudfour">state</span>. In spades. To manage.</p>
 						<aside class="notes">Our applications have a bona-fide <em>lifecycle</em> now.</aside>
 					</section>
 
@@ -314,6 +319,7 @@ document.addEventListener("resume", ohGodWhereWasI, false);
 							<dt>API</dt>
 							<dd>!!</dd>
 						</dl>
+						<aside class="notes">Of course, now clients have grown up, or at least made it into the boisterous teen years. They have their own independent ideas about data sometimes. It can be very hormonal and confusing.</aside>
 					</section>
 
 					<section data-background="assets/bletchley.jpg">
@@ -344,7 +350,6 @@ document.addEventListener("resume", ohGodWhereWasI, false);
 							<li class="fragment">Make it behave RESTfully just like remote sync to keep the chaos minimized</li>
 							<li class="fragment">Nervous? You might consider readonly for local</li>
 						</ul>
-						<aside class="notes">Or...if you don't feel like giving all of your data to Parse</aside>
 					</section>
 
 					<section>
@@ -391,7 +396,7 @@ document.addEventListener("online", hiThereHeresWhatChanged, false);
 					<section>
 						<h2>Defending yourself</h2>
 						<h4><em>Category 2</em></h4>
-						<h3 class="fragment roll-in">Nuance and Context</h3>
+						<h3 class="fragment roll-in">Inside the app: Nuance and Context</h3>
 						<aside class="notes">So, now we're inside of a native application. What does it look like from in here?</aside>
 					</section>
 					<section>
@@ -474,19 +479,19 @@ document.addEventListener("online", hiThereHeresWhatChanged, false);
 					<section>
 						<h3>Nuance and Context: Putting it together</h3>
 						<ul>
-							<li class="fragment roll-in">Metaphorical Shifts
+							<li>Metaphorical Shifts
 								<ul>
-									<li class="fragment roll-in">Non-linear navigation</li>
-									<li class="fragment roll-in">State management</li>
+									<li>Non-linear navigation</li>
+									<li>State management</li>
 								</ul>
 							</li>
-							<li class="fragment roll-in">Interface Context
+							<li>Interface Context
 								<ul>
-									<li class="fragment roll-in">Platform-specific optimization (keyboard)</li>
-									<li class="fragment roll-in">Tap delay acceleration</li>
+									<li>Platform-specific optimization (keyboard)</li>
+									<li>Tap delay acceleration</li>
 								</ul>
 							</li>
-							<li class="fragment roll-in">Memory Management and care</li>
+							<li>Memory Management and care</li>
 						</ul>
 					</section>
 
@@ -657,7 +662,7 @@ if window.plugins.barcodeScanner
 					<p><a href="http://cloudfour.com"><img class="logo" src="assets/logo.svg" alt="Cloud Four"></a></p>
 					<p>&nbsp;</p>
 					<h5>Lyza Danger Gardner / @lyzadanger</h5>
-					<p><small>Download this presentation at <a href="https://github.com/lyzadanger/pgd-2013-reveal.js">https://github.com/lyzadanger/pgd-2013-reveal.js</a></small></p>
+					<p><small>Download this presentation at <a href="https://github.com/lyzadanger/pgd-eu-2013">https://github.com/lyzadanger/pgd-2013-reveal.js</a></small></p>
 					<p><small>Designed with <a href="https://github.com/hakimel/reveal.js">Reveal.js</a> with lovely help from <a href="http://twitter.com/tylersticka">@tylersticka</a> on the Cloud Four theme. All photos taken by me except: <em>Our Focus is Mobile</em> and <em>Gold Star</em> (Lisa Teso); <em>Yawn</em> (Luke Wroblewski); <em>Ka-boof</em> (Unknown)</small></p>
 				</section>
 
@@ -688,7 +693,9 @@ if window.plugins.barcodeScanner
 					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
 					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+	        { src: '/socket.io/socket.io.js', async: true },
+          { src: 'plugin/notes-server/client.js', async: true }
 					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
 					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
 				],
